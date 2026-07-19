@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- 3D Background -->
+    <div id="bg3d"></div>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            CampusConnect
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <h1>
+            Connect.
+            <span>Learn.</span>
+            Grow Together.
+        </h1>
+
+        <p>
+            A futuristic platform where students can connect,
+            collaborate, share notes, attend events,
+            join clubs and build their careers.
+        </p>
+
+        <div class="buttons">
+
+            <a href="/register" class="btn primary">
+                Get Started
+            </a>
+
+            <a href="/login" class="btn secondary">
+                Login
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Features -->
+
+    <section class="features" id="features">
+
+        <div class="card">
+            <i class="fa-solid fa-bullhorn"></i>
+            <h2>Announcements</h2>
+            <p>Never miss campus updates.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h2>Events</h2>
+            <p>Explore workshops and festivals.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-book"></i>
+            <h2>Study Notes</h2>
+            <p>Share and download notes.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-users"></i>
+            <h2>Student Clubs</h2>
+            <p>Join your favorite communities.</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h2>CampusConnect</h2>
+
+        <p>
+            Connecting students with opportunities.
+        </p>
+
+        <p>
+            © 2026 CampusConnect. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <!-- Three.js -->
+    <script src="https://unpkg.com/three@0.179.1/build/three.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
