@@ -462,3 +462,41 @@ footer p{
     }
 
 }
+body{
+    opacity:0;
+    transition:1s;
+}
+
+.btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.ripple{
+
+    position:absolute;
+
+    width:15px;
+    height:15px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    animation:ripple .6s linear;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(25);
+
+opacity:0;
+
+}
+
+}
