@@ -1,0 +1,855 @@
+/* ==========================================
+   CAMPUS CONNECT - LOGIN PAGE
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#050816;
+
+    color:white;
+
+}
+
+/* ============================
+   Animated Background
+============================ */
+
+.background{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.background span{
+
+    position:absolute;
+
+    display:block;
+
+    border-radius:50%;
+
+    background:rgba(0,229,255,.15);
+
+    animation:float 18s linear infinite;
+
+    filter:blur(8px);
+
+}
+
+.background span:nth-child(1){
+
+    width:300px;
+    height:300px;
+
+    left:-80px;
+    top:-80px;
+
+}
+
+.background span:nth-child(2){
+
+    width:220px;
+    height:220px;
+
+    right:5%;
+    top:10%;
+
+}
+
+.background span:nth-child(3){
+
+    width:260px;
+    height:260px;
+
+    left:20%;
+    bottom:-100px;
+
+}
+
+.background span:nth-child(4){
+
+    width:180px;
+    height:180px;
+
+    right:20%;
+    bottom:15%;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px) rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-50px) rotate(180deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0px) rotate(360deg);
+
+    }
+
+}
+
+/* ============================
+   Main Container
+============================ */
+
+.container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+/* ============================
+   Left Side
+============================ */
+
+.left{
+
+    width:50%;
+
+}
+
+.left h1{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.left h1 span{
+
+    color:#00e5ff;
+
+}
+
+.left h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.left p{
+
+    color:#d0d0d0;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.features div{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    transition:.4s;
+
+}
+
+.features div:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px rgba(0,229,255,.35);
+
+}
+
+.features i{
+
+    color:#00e5ff;
+
+    margin-right:10px;
+
+}
+/* ============================
+   Login Card
+============================ */
+
+.login-card{
+
+    width:420px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+
+    border-radius:25px;
+
+    padding:45px 35px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.35),
+    0 0 35px rgba(0,229,255,.15);
+
+    transition:.4s;
+
+}
+
+.login-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 25px 80px rgba(0,0,0,.45),
+    0 0 45px rgba(0,229,255,.35);
+
+}
+
+/* ============================
+   Heading
+============================ */
+
+.login-card h2{
+
+    text-align:center;
+
+    font-size:36px;
+
+    color:#00e5ff;
+
+    margin-bottom:10px;
+
+}
+
+.login-card p{
+
+    text-align:center;
+
+    color:#cfcfcf;
+
+    margin-bottom:30px;
+
+}
+
+/* ============================
+   Input Box
+============================ */
+
+.input-box{
+
+    position:relative;
+
+    margin-bottom:22px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:16px 50px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.35s;
+
+}
+
+.input-box input::placeholder{
+
+    color:#bdbdbd;
+
+}
+
+.input-box input:focus{
+
+    border-color:#00e5ff;
+
+    box-shadow:0 0 18px rgba(0,229,255,.45);
+
+}
+
+/* ============================
+   Icons
+============================ */
+
+.input-box i{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#00e5ff;
+
+    font-size:17px;
+
+}
+
+.input-box i:first-child{
+
+    left:20px;
+
+}
+
+.toggle{
+
+    right:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.toggle:hover{
+
+    color:white;
+
+    transform:translateY(-50%) scale(1.2);
+
+}
+
+/* ============================
+   Remember + Forgot
+============================ */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+    font-size:14px;
+
+}
+
+.options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    color:#d7d7d7;
+
+}
+
+.options input{
+
+    accent-color:#00e5ff;
+
+}
+
+.options a{
+
+    text-decoration:none;
+
+    color:#00e5ff;
+
+    transition:.3s;
+
+}
+
+.options a:hover{
+
+    color:white;
+
+}
+/* ============================
+   Login Button
+============================ */
+
+.login-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#00e5ff,#0099ff);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    margin-bottom:25px;
+
+    box-shadow:0 0 20px rgba(0,229,255,.35);
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 35px rgba(0,229,255,.7);
+
+}
+
+/* ============================
+   Divider
+============================ */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    margin:25px 0;
+
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.divider span{
+
+    padding:0 15px;
+
+    color:#bbbbbb;
+
+    font-size:14px;
+
+}
+
+/* ============================
+   Google & GitHub Buttons
+============================ */
+
+.google,
+.github{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    margin-bottom:15px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.google i,
+.github i{
+
+    margin-right:10px;
+
+    font-size:18px;
+
+}
+
+.google:hover{
+
+    background:#ffffff;
+
+    color:#111;
+
+    transform:translateY(-4px);
+
+}
+
+.github:hover{
+
+    background:#24292e;
+
+    color:white;
+
+    transform:translateY(-4px);
+
+}
+
+/* ============================
+   Register Link
+============================ */
+
+.register{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+.register a{
+
+    color:#00e5ff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.register a:hover{
+
+    color:white;
+
+}
+/* ============================
+   Floating Animation
+============================ */
+
+.login-card{
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ============================
+   Fade Animation
+============================ */
+
+.left{
+
+    animation:fadeLeft 1s ease;
+
+}
+
+.login-card{
+
+    animation:
+    fadeRight 1s ease,
+    floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ============================
+   Hover Effects
+============================ */
+
+button{
+
+    transition:.35s;
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+.features div{
+
+    cursor:pointer;
+
+}
+
+.features div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ============================
+   Responsive
+============================ */
+
+@media(max-width:1000px){
+
+.container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:40px;
+
+}
+
+.left{
+
+    width:100%;
+
+}
+
+.login-card{
+
+    width:100%;
+
+    max-width:450px;
+
+}
+
+.features{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.left h1{
+
+    font-size:42px;
+
+}
+
+.left h2{
+
+    font-size:30px;
+
+}
+
+.left p{
+
+    font-size:16px;
+
+}
+
+.login-card{
+
+    padding:35px 25px;
+
+}
+
+.login-card h2{
+
+    font-size:30px;
+
+}
+
+.options{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+}
+
+.google,
+.github,
+.login-btn{
+
+    font-size:14px;
+
+}
+
+}
+body{
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ripple{
+
+    position:absolute;
+
+    width:15px;
+    height:15px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    animation:ripple .6s linear;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(25);
+
+opacity:0;
+
+}
+
+}
