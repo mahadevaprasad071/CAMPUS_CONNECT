@@ -14,14 +14,20 @@ body{
     min-height:100vh;
 
     display:flex;
+
     justify-content:center;
-    align-items:center;
 
-    overflow:hidden;
+    align-items:flex-start;
 
-    background:#050816;
+    padding:40px 20px;
 
-    color:white;
+    overflow-x:hidden;
+
+    overflow-y:auto;
+
+    background:linear-gradient(135deg,#081229,#112240,#05111f);
+
+    position:relative;
 
 }
 
@@ -128,7 +134,7 @@ body{
 
     width:90%;
 
-    max-width:1300px;
+    max-width:1250px;
 
     display:flex;
 
@@ -137,6 +143,8 @@ body{
     align-items:center;
 
     gap:60px;
+
+    margin:40px auto;
 
 }
 
@@ -721,94 +729,9 @@ button:active{
 }
 
 /* ============================
-   Responsive
+   Body Fade
 ============================ */
 
-@media(max-width:1000px){
-
-.container{
-
-    flex-direction:column;
-
-    text-align:center;
-
-    gap:40px;
-
-}
-
-.left{
-
-    width:100%;
-
-}
-
-.login-card{
-
-    width:100%;
-
-    max-width:450px;
-
-}
-
-.features{
-
-    grid-template-columns:1fr;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.left h1{
-
-    font-size:42px;
-
-}
-
-.left h2{
-
-    font-size:30px;
-
-}
-
-.left p{
-
-    font-size:16px;
-
-}
-
-.login-card{
-
-    padding:35px 25px;
-
-}
-
-.login-card h2{
-
-    font-size:30px;
-
-}
-
-.options{
-
-    flex-direction:column;
-
-    gap:15px;
-
-    align-items:flex-start;
-
-}
-
-.google,
-.github,
-.login-btn{
-
-    font-size:14px;
-
-}
-
-}
 body{
 
     opacity:0;
@@ -816,6 +739,10 @@ body{
     transition:1s;
 
 }
+
+/* ============================
+   Ripple Effect
+============================ */
 
 button{
 
@@ -830,6 +757,7 @@ button{
     position:absolute;
 
     width:15px;
+
     height:15px;
 
     background:white;
@@ -844,12 +772,110 @@ button{
 
 @keyframes ripple{
 
-to{
+    to{
 
-transform:scale(25);
+        transform:scale(25);
 
-opacity:0;
+        opacity:0;
+
+    }
 
 }
+
+/* ============================
+   Responsive
+============================ */
+
+@media(max-width:1000px){
+
+    body{
+
+        padding:30px 15px;
+
+    }
+
+    .container{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:40px;
+
+        margin:20px auto;
+
+    }
+
+    .left{
+
+        width:100%;
+
+    }
+
+    .login-card{
+
+        width:100%;
+
+        max-width:450px;
+
+    }
+
+    .features{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .left h1{
+
+        font-size:42px;
+
+    }
+
+    .left h2{
+
+        font-size:30px;
+
+    }
+
+    .left p{
+
+        font-size:16px;
+
+    }
+
+    .login-card{
+
+        padding:35px 25px;
+
+    }
+
+    .login-card h2{
+
+        font-size:30px;
+
+    }
+
+    .options{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        align-items:flex-start;
+
+    }
+
+    .google,
+    .github,
+    .login-btn{
+
+        font-size:14px;
+
+    }
 
 }

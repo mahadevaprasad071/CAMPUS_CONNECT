@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusConnect | Register</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/register.css') }}">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="left">
+
+<h1>CampusConnect</h1>
+
+<h2>Create Your Account</h2>
+
+<p>
+Join thousands of students and connect with your campus community.
+</p>
+
+<div class="features">
+
+<div>
+<i class="fas fa-user-graduate"></i>
+<span>Student Network</span>
+</div>
+
+<div>
+<i class="fas fa-book"></i>
+<span>Study Resources</span>
+</div>
+
+<div>
+<i class="fas fa-calendar"></i>
+<span>Campus Events</span>
+</div>
+
+<div>
+<i class="fas fa-comments"></i>
+<span>Discussions</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="register-card">
+
+<h2>Create Account</h2>
+
+<form>
+
+<div class="input-box">
+
+<i class="fas fa-user"></i>
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fas fa-id-card"></i>
+
+<input
+type="text"
+placeholder="USN"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fas fa-envelope"></i>
+
+<input
+type="email"
+placeholder="College Email"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fas fa-phone"></i>
+
+<input
+type="tel"
+placeholder="Phone Number"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fas fa-lock"></i>
+
+<input
+id="password"
+type="password"
+placeholder="Password"
+required>
+
+<i
+id="togglePassword"
+class="fas fa-eye eye"></i>
+
+</div>
+
+<div class="strength">
+
+<div id="strength-bar"></div>
+
+</div>
+
+<p id="strength-text">
+Password Strength
+</p>
+
+<div class="input-box">
+
+<i class="fas fa-lock"></i>
+
+<input
+id="confirmPassword"
+type="password"
+placeholder="Confirm Password"
+required>
+
+</div>
+
+<p id="match-text"></p>
+
+<button class="register-btn">
+
+Create Account
+
+</button>
+
+<div class="divider">
+
+<span>OR</span>
+
+</div>
+
+<button
+type="button"
+class="google">
+
+<i class="fab fa-google"></i>
+
+Continue with Google
+
+</button>
+
+<p class="login-link">
+
+Already have an account?
+
+<a href="/login">
+
+Login
+
+</a>
+
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
+
+</body>
+
+</html>
