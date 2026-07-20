@@ -1,40 +1,59 @@
-# 🎓 CampusConnect
+# 🎓 CampusConnect ERP
 
-A modern campus management and student networking platform built using **Flask**, **HTML**, **CSS**, and **JavaScript**.
-
-This project aims to connect students through a single platform for announcements, events, study materials, clubs, placements, and more.
+A modern, responsive student portal built using **Flask, HTML, CSS, and JavaScript**. CampusConnect ERP is designed to simplify campus life by providing students with a single platform for communication, academic resources, events, and community engagement.
 
 ---
 
-## 🚀 Day 1 Progress
+## 🚀 Features
 
-✅ Project folder structure created
+### ✅ Completed
+- 🏠 Responsive Landing Page
+- 🎨 Modern Glassmorphism UI
+- ✨ Smooth Animations
+- 🔐 Premium Login Page
+- 👤 Premium Register Page
+- 📱 Mobile Responsive Design
+- 📜 Scrollable Layout
+- 🐍 Flask Backend Setup
+- 📂 Organized Project Structure
 
-✅ Flask project setup completed
+### 🔄 In Progress
+- SQLite Database Integration
+- User Authentication
+- Dashboard
+- User Profile
+- Session Management
 
-✅ Responsive landing page designed
-
-✅ Modern navigation bar
-
-✅ Hero section
-
-✅ Feature cards
-
-✅ Footer
-
-✅ CSS animations
-
-✅ JavaScript interactions
+### 🎯 Upcoming Features
+- 📚 Study Notes
+- 📅 Campus Events
+- 💬 Student Discussion Forum
+- 📢 Announcements
+- 🌙 Dark Mode
+- 🔔 Notifications
+- 📈 Student Dashboard
+- 🏆 Attendance & Academic Modules
 
 ---
 
 ## 🛠️ Technologies Used
 
+### Frontend
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (ES6)
+
+### Backend
 - Python
 - Flask
+
+### Database
+- SQLite (Upcoming)
+
+### Tools
+- Visual Studio Code
+- Git
+- GitHub
 
 ---
 
@@ -43,68 +62,56 @@ This project aims to connect students through a single platform for announcement
 ```
 CampusConnect/
 │
-├── app.py
-├── requirements.txt
-├── README.md
-│
 ├── database/
 │   └── init_db.py
 │
 ├── static/
 │   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   └── images/
+│   │   ├── style.css
+│   │   ├── login.css
+│   │   └── register.css
+│   │
+│   └── js/
+│       ├── script.js
+│       ├── login.js
+│       └── register.js
 │
 ├── templates/
 │   ├── index.html
 │   ├── login.html
 │   ├── register.html
-│   └── dashboard.html
+│   ├── dashboard.html
+│   ├── about.html
+│   └── contact.html
+│
+├── app.py
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## ✨ Features
+## ⚙️ Installation
 
-- Responsive Landing Page
-- Modern UI Design
-- Hero Section
-- Navigation Bar
-- Feature Cards
-- Smooth Animations
-- Flask Routing
-
----
-
-## 📌 Upcoming Features
-
-- Student Login
-- Student Registration
-- SQLite Database
-- Dashboard
-- Announcements
-- Events
-- Notes Sharing
-- Student Clubs
-- Placement Portal
-- AI Assistant
-- 3D Homepage
-- Interactive UI
-- Dark Mode
-
----
-
-## ▶️ How to Run
-
-### Install Flask
+### Clone the repository
 
 ```bash
-pip install flask
+git clone https://github.com/YOUR_USERNAME/CampusConnect.git
 ```
 
-### Run the project
+### Open the project
+
+```bash
+cd CampusConnect
+```
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the application
 
 ```bash
 python app.py
@@ -118,9 +125,37 @@ http://127.0.0.1:5000
 
 ---
 
-## 📷 Preview
+## 🎯 Project Goal
 
-Landing page with a modern responsive design built using Flask.
+CampusConnect ERP aims to provide a single platform where students can:
+
+- Connect with classmates
+- Access study resources
+- Participate in campus events
+- Share knowledge
+- Build academic communities
+
+---
+
+## 📸 Current Status
+
+✅ Landing Page Completed
+
+✅ Login Page Completed
+
+✅ Register Page Completed
+
+✅ Responsive Design Completed
+
+✅ Flask Integration Completed
+
+🚧 Authentication Module Under Development
+
+---
+
+## 🌟 Future Vision
+
+CampusConnect ERP is being developed as a complete student management and collaboration platform with secure authentication, academic resources, event management, and community features.
 
 ---
 
@@ -130,6 +165,6 @@ Landing page with a modern responsive design built using Flask.
 
 ---
 
-## ⭐ Future Vision
+## ⭐ Support
 
-CampusConnect is being developed into a complete smart campus platform with modern UI, secure authentication, student collaboration features, and an interactive 3D homepage.
+If you like this project, consider giving it a ⭐ on GitHub.
