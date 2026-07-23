@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusConnect Dashboard</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>CampusConnect</h2>
+            </div>
+
+            <ul class="menu">
+
+                <li class="active">
+                    <a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-road"></i>
+                        Roadmaps
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-book"></i>
+                        Courses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-calendar"></i>
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user-group"></i>
+                        Community
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+                <!-- Logout -->
+                <li>
+                    <a href="{{ url_for('logout') }}">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+
+            <!-- Top Navigation -->
+            <header class="topbar">
+
+                <div class="welcome">
+                    <h1>Hello, {{ username }} 👋</h1>
+                    <p>Welcome back to CampusConnect</p>
+                </div>
+
+                <div class="profile">
+                    <img src="https://i.pravatar.cc/50" alt="Profile">
+                </div>
+
+            </header>
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="card">
+                    <h2>12</h2>
+                    <p>Courses</p>
+                </div>
+
+                <div class="card">
+                    <h2>08</h2>
+                    <p>Roadmaps</p>
+                </div>
+
+                <div class="card">
+                    <h2>25</h2>
+                    <p>Tasks</p>
+                </div>
+
+                <div class="card">
+                    <h2>15 🔥</h2>
+                    <p>Day Streak</p>
+                </div>
+
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="actions">
+
+                <h2>Quick Actions</h2>
+
+                <div class="action-buttons">
+
+                    <button>Learn Python</button>
+
+                    <button>Learn Java</button>
+
+                    <button>Web Development</button>
+
+                    <button>AI & ML</button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+
+</html>

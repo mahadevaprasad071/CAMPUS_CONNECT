@@ -12,7 +12,7 @@
           href="{{ url_for('static', filename='css/register.css') }}">
 
     <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
@@ -20,169 +20,187 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <div class="container">
 
-<div class="left">
+    <!-- Left Section -->
 
-<h1>CampusConnect</h1>
+    <div class="left">
 
-<h2>Create Your Account</h2>
+        <h1>CampusConnect</h1>
 
-<p>
-Join thousands of students and connect with your campus community.
-</p>
+        <h2>Create Your Account</h2>
 
-<div class="features">
+        <p>
+            Join thousands of students and connect with your campus community.
+        </p>
 
-<div>
-<i class="fas fa-user-graduate"></i>
-<span>Student Network</span>
-</div>
+        <div class="features">
 
-<div>
-<i class="fas fa-book"></i>
-<span>Study Resources</span>
-</div>
+            <div>
+                <i class="fas fa-user-graduate"></i>
+                <span>Student Network</span>
+            </div>
 
-<div>
-<i class="fas fa-calendar"></i>
-<span>Campus Events</span>
-</div>
+            <div>
+                <i class="fas fa-book"></i>
+                <span>Study Resources</span>
+            </div>
 
-<div>
-<i class="fas fa-comments"></i>
-<span>Discussions</span>
-</div>
+            <div>
+                <i class="fas fa-calendar"></i>
+                <span>Campus Events</span>
+            </div>
 
-</div>
+            <div>
+                <i class="fas fa-comments"></i>
+                <span>Discussions</span>
+            </div>
 
-</div>
+        </div>
 
-<div class="register-card">
+    </div>
 
-<h2>Create Account</h2>
+    <!-- Register Card -->
 
-<form>
+    <div class="register-card">
 
-<div class="input-box">
+        <h2>Create Account</h2>
 
-<i class="fas fa-user"></i>
+        <form method="POST" action="/register">
 
-<input
-type="text"
-placeholder="Full Name"
-required>
+            <!-- Full Name -->
 
-</div>
+            <div class="input-box">
 
-<div class="input-box">
+                <i class="fas fa-user"></i>
 
-<i class="fas fa-id-card"></i>
+                <input
+                    type="text"
+                    name="fullname"
+                    placeholder="Full Name"
+                    required>
 
-<input
-type="text"
-placeholder="USN"
-required>
+            </div>
 
-</div>
+            <!-- USN -->
 
-<div class="input-box">
+            <div class="input-box">
 
-<i class="fas fa-envelope"></i>
+                <i class="fas fa-id-card"></i>
 
-<input
-type="email"
-placeholder="College Email"
-required>
+                <input
+                    type="text"
+                    name="usn"
+                    placeholder="USN"
+                    required>
 
-</div>
+            </div>
 
-<div class="input-box">
+            <!-- Email -->
 
-<i class="fas fa-phone"></i>
+            <div class="input-box">
 
-<input
-type="tel"
-placeholder="Phone Number"
-required>
+                <i class="fas fa-envelope"></i>
 
-</div>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="College Email"
+                    required>
 
-<div class="input-box">
+            </div>
 
-<i class="fas fa-lock"></i>
+            <!-- Phone -->
 
-<input
-id="password"
-type="password"
-placeholder="Password"
-required>
+            <div class="input-box">
 
-<i
-id="togglePassword"
-class="fas fa-eye eye"></i>
+                <i class="fas fa-phone"></i>
 
-</div>
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required>
 
-<div class="strength">
+            </div>
 
-<div id="strength-bar"></div>
+            <!-- Password -->
 
-</div>
+            <div class="input-box">
 
-<p id="strength-text">
-Password Strength
-</p>
+                <i class="fas fa-lock"></i>
 
-<div class="input-box">
+                <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required>
 
-<i class="fas fa-lock"></i>
+                <i
+                    id="togglePassword"
+                    class="fas fa-eye eye"></i>
 
-<input
-id="confirmPassword"
-type="password"
-placeholder="Confirm Password"
-required>
+            </div>
 
-</div>
+            <!-- Password Strength -->
 
-<p id="match-text"></p>
+            <div class="strength">
+                <div id="strength-bar"></div>
+            </div>
 
-<button class="register-btn">
+            <p id="strength-text">
+                Password Strength
+            </p>
 
-Create Account
+            <!-- Confirm Password -->
 
-</button>
+            <div class="input-box">
 
-<div class="divider">
+                <i class="fas fa-lock"></i>
 
-<span>OR</span>
+                <input
+                    id="confirmPassword"
+                    type="password"
+                    name="confirm_password"
+                    placeholder="Confirm Password"
+                    required>
 
-</div>
+            </div>
 
-<button
-type="button"
-class="google">
+            <p id="match-text"></p>
 
-<i class="fab fa-google"></i>
+            <!-- Register Button -->
 
-Continue with Google
+            <button type="submit" class="register-btn">
+                Create Account
+            </button>
 
-</button>
+            <div class="divider">
+                <span>OR</span>
+            </div>
 
-<p class="login-link">
+            <button
+                type="button"
+                class="google">
 
-Already have an account?
+                <i class="fab fa-google"></i>
 
-<a href="/login">
+                Continue with Google
 
-Login
+            </button>
 
-</a>
+            <p class="login-link">
 
-</p>
+                Already have an account?
 
-</form>
+                <a href="/login">
+                    Login
+                </a>
 
-</div>
+            </p>
+
+        </form>
+
+    </div>
 
 </div>
 
