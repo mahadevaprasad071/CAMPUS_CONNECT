@@ -168,3 +168,24 @@ CampusConnect ERP is being developed as a complete student management and collab
 ## ⭐ Support
 
 If you like this project, consider giving it a ⭐ on GitHub.
+# CampusConnect – NEXUS-08
+
+## New Features Added
+
+- User Registration
+- User Login
+- SQLite Database Integration
+- Flask Session Management
+- Personalized Dashboard
+- Protected Dashboard Route
+- Logout Functionality
+- Improved Authentication Flow
+
+## Technologies Used
+
+- Python
+- Flask
+- SQLite3
+- HTML5
+- CSS3
+- JavaScript
