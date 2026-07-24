@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder | CampusConnect</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/resume.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>📄 Resume Builder</h1>
+        <p>Create a professional resume in just a few minutes.</p>
+    </header>
+
+    <!-- Resume Form -->
+    <section class="resume-container">
+
+        <form id="resumeForm">
+
+            <h2>👤 Personal Information</h2>
+
+            <input type="text" placeholder="Full Name" required>
+
+            <input type="email" placeholder="Email Address" required>
+
+            <input type="tel" placeholder="Phone Number" required>
+
+            <input type="text" placeholder="LinkedIn Profile">
+
+            <input type="text" placeholder="GitHub Profile">
+
+            <textarea
+                rows="4"
+                placeholder="Professional Summary">
+            </textarea>
+
+            <h2>🎓 Education</h2>
+
+            <input type="text" placeholder="College Name">
+
+            <input type="text" placeholder="Degree">
+
+            <input type="text" placeholder="Branch">
+
+            <input type="text" placeholder="CGPA">
+
+            <input type="text" placeholder="Graduation Year">
+
+            <h2>💻 Skills</h2>
+
+            <textarea
+                rows="4"
+                placeholder="Example: Python, Java, HTML, CSS, JavaScript, Flask">
+            </textarea>
+
+            <h2>🚀 Projects</h2>
+
+            <textarea
+                rows="5"
+                placeholder="Describe your projects">
+            </textarea>
+
+            <h2>📜 Certifications</h2>
+
+            <textarea
+                rows="4"
+                placeholder="List your certifications">
+            </textarea>
+
+            <h2>🏆 Achievements</h2>
+
+            <textarea
+                rows="4"
+                placeholder="Mention your achievements">
+            </textarea>
+
+            <h2>🌐 Languages Known</h2>
+
+            <input type="text" placeholder="English, Kannada, Hindi">
+
+            <button type="submit">
+                👁 Preview Resume
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Back Button -->
+    <div class="back-btn">
+
+        <a href="{{ url_for('dashboard') }}">
+
+            <button>
+                ⬅ Back to Dashboard
+            </button>
+
+        </a>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/resume.js') }}"></script>
+
+</body>
+</html>

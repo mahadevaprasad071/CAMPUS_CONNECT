@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Roadmaps | CampusConnect</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/roadmap.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>📚 Learning Roadmaps</h1>
+        <p>Choose your learning path and start building your future.</p>
+    </header>
+
+    <!-- Search -->
+    <section class="search-section">
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="🔍 Search Roadmap..."
+        >
+    </section>
+
+    <!-- Roadmaps -->
+    <section class="roadmap-container">
+
+        <div class="roadmap-card">
+            <h2>🐍 Python Development</h2>
+            <p>Master Python from beginner to advanced with projects.</p>
+            <button>Start Learning</button>
+        </div>
+
+        <div class="roadmap-card">
+            <h2>☕ Java Development</h2>
+            <p>Learn Core Java, OOP, JDBC, Servlets and Advanced Java.</p>
+            <button>Start Learning</button>
+        </div>
+
+        <div class="roadmap-card">
+            <h2>🌐 Web Development</h2>
+            <p>HTML, CSS, JavaScript, Flask, SQL and Full Stack concepts.</p>
+            <button>Start Learning</button>
+        </div>
+
+        <div class="roadmap-card">
+            <h2>🤖 Artificial Intelligence</h2>
+            <p>Explore AI, Machine Learning, Deep Learning and LLMs.</p>
+            <button>Start Learning</button>
+        </div>
+
+        <div class="roadmap-card">
+            <h2>📊 Data Science</h2>
+            <p>Learn NumPy, Pandas, Visualization and Data Analysis.</p>
+            <button>Start Learning</button>
+        </div>
+
+        <div class="roadmap-card">
+            <h2>☁ Cloud Computing</h2>
+            <p>Understand AWS, Azure, Google Cloud and cloud services.</p>
+            <button>Start Learning</button>
+        </div>
+
+        <div class="roadmap-card">
+            <h2>🔐 Cyber Security</h2>
+            <p>Learn Ethical Hacking, Network Security and Cyber Defense.</p>
+            <button>Start Learning</button>
+        </div>
+
+        <div class="roadmap-card">
+            <h2>📱 Android Development</h2>
+            <p>Build Android applications using Java, Kotlin and Firebase.</p>
+            <button>Start Learning</button>
+        </div>
+
+        <div class="roadmap-card">
+            <h2>⚙ DevOps</h2>
+            <p>Learn Git, Docker, Kubernetes and CI/CD pipelines.</p>
+            <button>Start Learning</button>
+        </div>
+
+        <div class="roadmap-card">
+            <h2>🎯 Placement Preparation</h2>
+            <p>Prepare DSA, Aptitude, HR and Technical Interviews.</p>
+            <button>Start Learning</button>
+        </div>
+
+    </section>
+
+    <!-- Back Button -->
+    <div class="back-btn">
+        <a href="{{ url_for('dashboard') }}">
+            <button>⬅ Back to Dashboard</button>
+        </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/roadmap.js') }}"></script>
+
+</body>
+</html>

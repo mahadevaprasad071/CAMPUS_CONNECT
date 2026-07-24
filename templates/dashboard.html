@@ -2,153 +2,256 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CampusConnect Dashboard</title>
 
-    <!-- Dashboard CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
-    <div class="dashboard">
+<div class="dashboard">
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
+    <!-- Sidebar -->
+    <aside class="sidebar">
 
-            <div class="logo">
-                <h2>CampusConnect</h2>
+        <div class="logo">
+
+            <img src="{{ url_for('static', filename='images/icon/logo.png') }}"
+                 alt="CampusConnect Logo"
+                 class="logo-img">
+
+            <h2>CampusConnect</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+                <a href="{{ url_for('dashboard') }}">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('about') }}">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('contact') }}">
+                    <i class="fa-solid fa-address-book"></i>
+                    Contact
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('roadmap') }}">
+                    <i class="fa-solid fa-road"></i>
+                    Roadmaps
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('coding') }}">
+                    <i class="fa-solid fa-code"></i>
+                    Coding Practice
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('projects') }}">
+                    <i class="fa-solid fa-folder-open"></i>
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('resume') }}">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Resume Builder
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('ai') }}">
+                    <i class="fa-solid fa-robot"></i>
+                    AI Mentor
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('progress') }}">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Progress Tracker
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('interview') }}">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Interview Preparation
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('logout') }}">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <header class="topbar">
+
+            <div class="welcome">
+
+                <h1>Hello, {{ username }} 👋</h1>
+
+                <p>Welcome back to CampusConnect</p>
+
             </div>
 
-            <ul class="menu">
+            <div class="profile">
 
-                <li class="active">
-                    <a href="#">
-                        <i class="fa-solid fa-house"></i>
-                        Dashboard
-                    </a>
-                </li>
+                <img src="{{ url_for('static', filename='images/avatar/default.png') }}"
+                     alt="Default Avatar">
 
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-road"></i>
-                        Roadmaps
-                    </a>
-                </li>
+            </div>
 
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-book"></i>
-                        Courses
-                    </a>
-                </li>
+        </header>
 
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-calendar"></i>
-                        Events
-                    </a>
-                </li>
+        <!-- Statistics -->
+        <section class="stats">
 
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-user-group"></i>
-                        Community
-                    </a>
-                </li>
+            <div class="card">
+                <h2>12</h2>
+                <p>Courses</p>
+            </div>
 
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-gear"></i>
-                        Settings
-                    </a>
-                </li>
+            <div class="card">
+                <h2>08</h2>
+                <p>Roadmaps</p>
+            </div>
 
-                <!-- Logout -->
-                <li>
-                    <a href="{{ url_for('logout') }}">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        Logout
-                    </a>
-                </li>
+            <div class="card">
+                <h2>25</h2>
+                <p>Tasks</p>
+            </div>
 
-            </ul>
+            <div class="card">
+                <h2>15 🔥</h2>
+                <p>Day Streak</p>
+            </div>
 
-        </aside>
+        </section>
 
-        <!-- Main Content -->
-        <main class="content">
+        <!-- Quick Actions -->
+        <section class="actions">
 
-            <!-- Top Navigation -->
-            <header class="topbar">
+            <h2>Quick Actions</h2>
 
-                <div class="welcome">
-                    <h1>Hello, {{ username }} 👋</h1>
-                    <p>Welcome back to CampusConnect</p>
-                </div>
+            <div class="action-buttons">
 
-                <div class="profile">
-                    <img src="https://i.pravatar.cc/50" alt="Profile">
-                </div>
+                <a href="{{ url_for('roadmap') }}">
+                    <button>🐍 Learn Python</button>
+                </a>
 
-            </header>
+                <a href="{{ url_for('roadmap') }}">
+                    <button>☕ Learn Java</button>
+                </a>
 
-            <!-- Statistics -->
-            <section class="stats">
+                <a href="{{ url_for('roadmap') }}">
+                    <button>🌐 Web Development</button>
+                </a>
 
-                <div class="card">
-                    <h2>12</h2>
-                    <p>Courses</p>
-                </div>
+                <a href="{{ url_for('roadmap') }}">
+                    <button>🤖 AI & ML</button>
+                </a>
 
-                <div class="card">
-                    <h2>08</h2>
-                    <p>Roadmaps</p>
-                </div>
+            </div>
 
-                <div class="card">
-                    <h2>25</h2>
-                    <p>Tasks</p>
-                </div>
+        </section>
 
-                <div class="card">
-                    <h2>15 🔥</h2>
-                    <p>Day Streak</p>
-                </div>
+        <!-- Explore -->
+        <section class="actions">
 
-            </section>
+            <h2>Explore CampusConnect</h2>
 
-            <!-- Quick Actions -->
-            <section class="actions">
+            <div class="action-buttons">
 
-                <h2>Quick Actions</h2>
+                <a href="{{ url_for('coding') }}">
+                    <button>💻 Coding Practice</button>
+                </a>
 
-                <div class="action-buttons">
+                <a href="{{ url_for('projects') }}">
+                    <button>🚀 Projects</button>
+                </a>
 
-                    <button>Learn Python</button>
+                <a href="{{ url_for('resume') }}">
+                    <button>📄 Resume Builder</button>
+                </a>
 
-                    <button>Learn Java</button>
+                <a href="{{ url_for('ai') }}">
+                    <button>🤖 AI Mentor</button>
+                </a>
 
-                    <button>Web Development</button>
+                <a href="{{ url_for('progress') }}">
+                    <button>📈 Progress Tracker</button>
+                </a>
 
-                    <button>AI & ML</button>
+                <a href="{{ url_for('interview') }}">
+                    <button>🎤 Interview Preparation</button>
+                </a>
 
-                </div>
+            </div>
 
-            </section>
+        </section>
 
-        </main>
+        <!-- Platform -->
+        <section class="actions">
 
-    </div>
+            <h2>Platform</h2>
 
-    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+            <div class="action-buttons">
+
+                <a href="{{ url_for('about') }}">
+                    <button>ℹ️ About</button>
+                </a>
+
+                <a href="{{ url_for('contact') }}">
+                    <button>📞 Contact</button>
+                </a>
+
+                <a href="{{ url_for('logout') }}">
+                    <button>🚪 Logout</button>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 
 </body>
-
 </html>

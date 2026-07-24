@@ -33,7 +33,7 @@ def login():
         conn.close()
 
         if user:
-            session["user"] = user[1]   # Full Name
+            session["user"] = user[1]      # Full Name
             return redirect(url_for("dashboard"))
         else:
             return "❌ Invalid Email or Password"
@@ -91,10 +91,102 @@ def dashboard():
     )
 
 
+# ---------------- ABOUT ----------------
+@app.route("/about")
+def about():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("about.html")
+
+
+# ---------------- CONTACT ----------------
+@app.route("/contact")
+def contact():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("contact.html")
+
+
+# ---------------- ROADMAP ----------------
+@app.route("/roadmap")
+def roadmap():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("roadmap.html")
+
+
+# ---------------- CODING ----------------
+@app.route("/coding")
+def coding():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("coding.html")
+
+
+# ---------------- PROJECTS ----------------
+@app.route("/projects")
+def projects():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("projects.html")
+
+
+# ---------------- RESUME ----------------
+@app.route("/resume")
+def resume():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("resume.html")
+
+
+# ---------------- AI MENTOR ----------------
+@app.route("/ai")
+def ai():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("ai.html")
+
+
+# ---------------- PROGRESS TRACKER ----------------
+@app.route("/progress")
+def progress():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("progress.html")
+
+
+# ---------------- INTERVIEW PREPARATION ----------------
+@app.route("/interview")
+def interview():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    return render_template("interview.html")
+
+
 # ---------------- LOGOUT ----------------
 @app.route("/logout")
 def logout():
+
     session.pop("user", None)
+
     return redirect(url_for("login"))
 
 

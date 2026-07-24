@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Progress Tracker | CampusConnect</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/progress.css') }}">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        <h2>CampusConnect</h2>
+    </div>
+
+    <ul>
+
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+
+        <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+
+        <li><a href="{{ url_for('about') }}">About</a></li>
+
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="hero">
+
+    <h1>Your Learning Progress</h1>
+
+    <p>
+
+        Track your learning journey,
+        achievements and daily consistency.
+
+    </p>
+
+</section>
+
+<section class="cards">
+
+    <div class="card">
+
+        <i class="fa-solid fa-fire"></i>
+
+        <h2>15</h2>
+
+        <p>Day Streak</p>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-star"></i>
+
+        <h2>1250</h2>
+
+        <p>XP Points</p>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-book"></i>
+
+        <h2>12</h2>
+
+        <p>Courses Completed</p>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-trophy"></i>
+
+        <h2>8</h2>
+
+        <p>Achievements</p>
+
+    </div>
+
+</section>
+
+<section class="skills">
+
+<h2>Skill Progress</h2>
+
+<div class="skill">
+
+<p>Python</p>
+
+<div class="progress">
+
+<div class="fill python">
+
+90%
+
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>Java</p>
+
+<div class="progress">
+
+<div class="fill java">
+
+80%
+
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>Web Development</p>
+
+<div class="progress">
+
+<div class="fill web">
+
+75%
+
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>AI & ML</p>
+
+<div class="progress">
+
+<div class="fill ai">
+
+60%
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="goals">
+
+<h2>Today's Goals</h2>
+
+<ul>
+
+<li>✅ Practice Python for 1 hour</li>
+
+<li>✅ Solve 5 Coding Problems</li>
+
+<li>⬜ Learn Flask Routing</li>
+
+<li>⬜ Build Mini Project</li>
+
+<li>⬜ Revise DBMS</li>
+
+</ul>
+
+</section>
+
+<section class="achievements">
+
+<h2>Achievements</h2>
+
+<div class="badge-container">
+
+<div class="badge">🏆 Beginner</div>
+
+<div class="badge">🔥 15 Day Streak</div>
+
+<div class="badge">💻 Coding Hero</div>
+
+<div class="badge">📚 Learner</div>
+
+<div class="badge">🚀 Project Builder</div>
+
+<div class="badge">🤖 AI Explorer</div>
+
+</div>
+
+</section>
+
+<section class="quote">
+
+<h2>
+
+"Success is the sum of small efforts repeated every day."
+
+</h2>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 CampusConnect
+
+Made with ❤️ by Mahadeva Prasad
+
+</p>
+
+<a href="{{ url_for('dashboard') }}">
+
+<button>
+
+Back to Dashboard
+
+</button>
+
+</a>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/progress.js') }}"></script>
+
+</body>
+
+</html>

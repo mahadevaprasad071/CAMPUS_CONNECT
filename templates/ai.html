@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Mentor | CampusConnect</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/ai.css') }}">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>🤖 AI Mentor</h1>
+
+        <p>Your Personal Learning Assistant</p>
+
+    </header>
+
+    <div class="chat-box" id="chatBox">
+
+        <div class="bot">
+
+            👋 Hello!
+
+            I'm your AI Mentor.
+
+            Ask me anything about programming,
+            careers or interview preparation.
+
+        </div>
+
+    </div>
+
+    <div class="input-box">
+
+        <input
+        type="text"
+        id="userInput"
+        placeholder="Ask anything...">
+
+        <button id="sendBtn">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </div>
+
+    <div class="buttons">
+
+        <button class="quick-btn">
+            Python
+        </button>
+
+        <button class="quick-btn">
+            Java
+        </button>
+
+        <button class="quick-btn">
+            Web Dev
+        </button>
+
+        <button class="quick-btn">
+            AI
+        </button>
+
+        <button class="quick-btn">
+            DSA
+        </button>
+
+    </div>
+
+    <div class="back">
+
+        <a href="{{ url_for('dashboard') }}">
+
+            <button>
+
+                ⬅ Dashboard
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/ai.js') }}"></script>
+
+</body>
+</html>

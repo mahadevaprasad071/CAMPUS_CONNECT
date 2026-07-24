@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | CampusConnect</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>🚀 Student Projects</h1>
+        <p>Build real-world projects to strengthen your portfolio and coding skills.</p>
+    </header>
+
+    <!-- Search -->
+    <section class="search-section">
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="🔍 Search Projects..."
+        >
+    </section>
+
+    <!-- Beginner -->
+    <section class="project-section">
+
+        <h2>🟢 Beginner Projects</h2>
+
+        <div class="project-card">
+            <h3>Calculator App</h3>
+            <p>Build a simple calculator using HTML, CSS and JavaScript.</p>
+            <button>View Project</button>
+        </div>
+
+        <div class="project-card">
+            <h3>To-Do List</h3>
+            <p>Create a task manager with add, edit and delete features.</p>
+            <button>View Project</button>
+        </div>
+
+        <div class="project-card">
+            <h3>Password Generator</h3>
+            <p>Generate secure passwords using Python.</p>
+            <button>View Project</button>
+        </div>
+
+    </section>
+
+    <!-- Intermediate -->
+    <section class="project-section">
+
+        <h2>🟡 Intermediate Projects</h2>
+
+        <div class="project-card">
+            <h3>Weather App</h3>
+            <p>Fetch real-time weather using an API.</p>
+            <button>View Project</button>
+        </div>
+
+        <div class="project-card">
+            <h3>Library Management System</h3>
+            <p>Manage books and users using Python and SQLite.</p>
+            <button>View Project</button>
+        </div>
+
+        <div class="project-card">
+            <h3>Expense Tracker</h3>
+            <p>Track daily income and expenses with charts.</p>
+            <button>View Project</button>
+        </div>
+
+    </section>
+
+    <!-- Advanced -->
+    <section class="project-section">
+
+        <h2>🔴 Advanced Projects</h2>
+
+        <div class="project-card">
+            <h3>CampusConnect</h3>
+            <p>A student learning platform built using Flask, HTML, CSS, JS and SQLite.</p>
+            <button>View Project</button>
+        </div>
+
+        <div class="project-card">
+            <h3>AI Study Assistant</h3>
+            <p>An AI-powered learning assistant for students.</p>
+            <button>View Project</button>
+        </div>
+
+        <div class="project-card">
+            <h3>E-Commerce Website</h3>
+            <p>Build a full-stack online shopping platform.</p>
+            <button>View Project</button>
+        </div>
+
+    </section>
+
+    <!-- Featured Project -->
+    <section class="featured-project">
+
+        <h2>⭐ Featured Project</h2>
+
+        <div class="project-card">
+            <h3>CampusConnect</h3>
+            <p>
+                A complete learning platform featuring Roadmaps,
+                Coding Practice, Resume Builder, AI Mentor,
+                Progress Tracking and more.
+            </p>
+
+            <button>Explore Project</button>
+        </div>
+
+    </section>
+
+    <!-- Back Button -->
+    <div class="back-btn">
+        <a href="{{ url_for('dashboard') }}">
+            <button>⬅ Back to Dashboard</button>
+        </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+
+</body>
+</html>

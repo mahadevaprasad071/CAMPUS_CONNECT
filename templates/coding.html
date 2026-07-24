@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Practice | CampusConnect</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/coding.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>💻 Coding Practice</h1>
+        <p>Practice coding every day and improve your problem-solving skills.</p>
+    </header>
+
+    <!-- Search -->
+    <section class="search-section">
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="🔍 Search Coding Problem..."
+        >
+    </section>
+
+    <!-- Easy Problems -->
+    <section class="problem-section">
+
+        <h2>🟢 Easy Problems</h2>
+
+        <div class="problem-card">
+            <h3>Reverse String</h3>
+            <p>Reverse a given string using different approaches.</p>
+            <button>Solve</button>
+        </div>
+
+        <div class="problem-card">
+            <h3>Palindrome Number</h3>
+            <p>Check whether a number or string is a palindrome.</p>
+            <button>Solve</button>
+        </div>
+
+        <div class="problem-card">
+            <h3>Fibonacci Series</h3>
+            <p>Generate Fibonacci numbers using loops or recursion.</p>
+            <button>Solve</button>
+        </div>
+
+        <div class="problem-card">
+            <h3>Armstrong Number</h3>
+            <p>Determine whether a number is an Armstrong number.</p>
+            <button>Solve</button>
+        </div>
+
+    </section>
+
+    <!-- Medium Problems -->
+    <section class="problem-section">
+
+        <h2>🟡 Medium Problems</h2>
+
+        <div class="problem-card">
+            <h3>Binary Search</h3>
+            <p>Implement binary search on a sorted array.</p>
+            <button>Solve</button>
+        </div>
+
+        <div class="problem-card">
+            <h3>Bubble Sort</h3>
+            <p>Sort elements using the Bubble Sort algorithm.</p>
+            <button>Solve</button>
+        </div>
+
+        <div class="problem-card">
+            <h3>Stack Implementation</h3>
+            <p>Implement a stack using arrays or linked lists.</p>
+            <button>Solve</button>
+        </div>
+
+        <div class="problem-card">
+            <h3>Queue Implementation</h3>
+            <p>Implement queue operations efficiently.</p>
+            <button>Solve</button>
+        </div>
+
+    </section>
+
+    <!-- Hard Problems -->
+    <section class="problem-section">
+
+        <h2>🔴 Hard Problems</h2>
+
+        <div class="problem-card">
+            <h3>Graph Traversal</h3>
+            <p>Implement BFS and DFS graph traversal algorithms.</p>
+            <button>Solve</button>
+        </div>
+
+        <div class="problem-card">
+            <h3>Dynamic Programming</h3>
+            <p>Solve optimization problems using DP techniques.</p>
+            <button>Solve</button>
+        </div>
+
+        <div class="problem-card">
+            <h3>Binary Trees</h3>
+            <p>Practice tree traversal and binary tree operations.</p>
+            <button>Solve</button>
+        </div>
+
+        <div class="problem-card">
+            <h3>Trie Data Structure</h3>
+            <p>Implement Trie for efficient string searching.</p>
+            <button>Solve</button>
+        </div>
+
+    </section>
+
+    <!-- Daily Challenge -->
+    <section class="daily-challenge">
+
+        <h2>🔥 Daily Coding Challenge</h2>
+
+        <p>Solve today's coding challenge and improve your streak.</p>
+
+        <button>Start Challenge</button>
+
+    </section>
+
+    <!-- Progress -->
+    <section class="progress-section">
+
+        <h2>🏆 Your Progress</h2>
+
+        <div class="progress-card">
+            <p><strong>Problems Solved:</strong> 25</p>
+            <p><strong>Easy:</strong> 12</p>
+            <p><strong>Medium:</strong> 8</p>
+            <p><strong>Hard:</strong> 5</p>
+        </div>
+
+    </section>
+
+    <!-- Back -->
+    <div class="back-btn">
+        <a href="{{ url_for('dashboard') }}">
+            <button>⬅ Back to Dashboard</button>
+        </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/coding.js') }}"></script>
+
+</body>
+</html>

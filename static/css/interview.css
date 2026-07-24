@@ -1,0 +1,353 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+    line-height:1.6;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo h2{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#cbd5e1;
+    max-width:800px;
+    margin:auto;
+    font-size:18px;
+}
+
+/* Categories */
+
+.categories{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.category{
+    
+    background:rgba(255,255,255,.05);
+    -webkit-backdrop-filter:blur(15px);
+    backdrop-filter:blur(15px);
+    
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(56,189,248,.35);
+}
+
+.category i{
+    font-size:45px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.category h2{
+    margin-bottom:15px;
+}
+
+/* Companies */
+
+.companies{
+    width:90%;
+    margin:70px auto;
+}
+
+.companies h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#38bdf8;
+    font-size:38px;
+}
+
+.company-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.company{
+    background:#1e293b;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    transition:.3s;
+}
+
+.company:hover{
+    background:#2563eb;
+    transform:scale(1.05);
+}
+
+.company h3{
+    margin-bottom:12px;
+}
+
+/* Mock Interview */
+
+.mock{
+    width:90%;
+    margin:70px auto;
+}
+
+.mock h2{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:30px;
+}
+
+.question-box{
+    background:#1e293b;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+}
+
+.question-box p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.question-box button{
+    padding:15px 35px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.question-box button:hover{
+    background:#1d4ed8;
+}
+
+/* Tips */
+
+.tips{
+    width:90%;
+    margin:70px auto;
+}
+
+.tips h2{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:30px;
+}
+
+.tips ul{
+    background:#1e293b;
+    padding:35px;
+    border-radius:20px;
+}
+
+.tips li{
+    margin:15px 0;
+}
+
+/* Challenge */
+
+.challenge{
+    width:90%;
+    margin:70px auto;
+}
+
+.challenge h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#38bdf8;
+}
+
+.challenge-card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+}
+
+.challenge-card h3{
+    margin-bottom:20px;
+}
+
+.challenge-card p{
+    margin-bottom:25px;
+}
+
+.challenge-card button{
+    padding:15px 35px;
+    border:none;
+    border-radius:10px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.challenge-card button:hover{
+    background:#16a34a;
+}
+
+/* Resources */
+
+.resources{
+    width:90%;
+    margin:70px auto;
+}
+
+.resources h2{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:35px;
+}
+
+.resource-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.resource{
+    background:#1e293b;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.resource:hover{
+    background:#2563eb;
+    transform:translateY(-8px);
+}
+
+/* Footer */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:40px;
+}
+
+footer p{
+    margin-bottom:20px;
+}
+
+footer button{
+    padding:12px 30px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+footer button:hover{
+    background:#1d4ed8;
+}
+
+/* Animation */
+
+.category,
+.company,
+.question-box,
+.challenge-card,
+.resource{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .companies h2,
+    .tips h2,
+    .challenge h2,
+    .resources h2{
+        font-size:30px;
+    }
+
+}

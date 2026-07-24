@@ -1,0 +1,314 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+    line-height:1.6;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo h2{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#cbd5e1;
+    font-size:18px;
+}
+
+/* Cards */
+
+.cards{
+    width:90%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    -webkit-backdrop-filter:blur(15px);
+    backdrop-filter:blur(15px);
+    
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(56,189,248,.35);
+}
+
+.card i{
+    font-size:40px;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.card h2{
+    font-size:38px;
+}
+
+.card p{
+    color:#cbd5e1;
+}
+
+/* Skills */
+
+.skills{
+    width:90%;
+    margin:60px auto;
+}
+
+.skills h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#38bdf8;
+    font-size:40px;
+}
+
+.skill{
+    margin-bottom:30px;
+}
+
+.skill p{
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.progress{
+    width:100%;
+    height:24px;
+    background:#334155;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:bold;
+    color:white;
+    width:0;
+}
+
+.python{
+    width:90%;
+    background:#22c55e;
+}
+
+.java{
+    width:80%;
+    background:#2563eb;
+}
+
+.web{
+    width:75%;
+    background:#f59e0b;
+}
+
+.ai{
+    width:60%;
+    background:#ec4899;
+}
+
+/* Goals */
+
+.goals{
+    width:90%;
+    margin:70px auto;
+    background:#1e293b;
+    padding:35px;
+    border-radius:20px;
+}
+
+.goals h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.goals ul{
+    list-style:none;
+}
+
+.goals li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+/* Achievements */
+
+.achievements{
+    width:90%;
+    margin:70px auto;
+}
+
+.achievements h2{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:35px;
+}
+
+.badge-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.badge{
+    background:#2563eb;
+    padding:15px 25px;
+    border-radius:30px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.badge:hover{
+    transform:scale(1.08);
+    background:#38bdf8;
+}
+
+/* Quote */
+
+.quote{
+    width:90%;
+    margin:70px auto;
+    text-align:center;
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+}
+
+.quote h2{
+    color:#38bdf8;
+    font-style:italic;
+}
+
+/* Footer */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:40px;
+}
+
+footer p{
+    margin-bottom:20px;
+}
+
+footer button{
+    padding:12px 30px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+footer button:hover{
+    background:#1d4ed8;
+}
+
+/* Animation */
+
+.card,
+.skill,
+.goals,
+.badge,
+.quote{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .skills h2,
+    .achievements h2{
+        font-size:30px;
+    }
+
+}

@@ -1,0 +1,216 @@
+/* ===============================
+   CampusConnect Projects Page
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+    color:white;
+    min-height:100vh;
+    padding:40px;
+}
+
+/* Header */
+
+.header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#cbd5e1;
+    font-size:18px;
+}
+
+/* Search */
+
+.search-section{
+    display:flex;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+#searchBox{
+    width:450px;
+    max-width:90%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:rgba(255,255,255,.08);
+    color:white;
+    border:1px solid rgba(255,255,255,.15);
+
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+    
+}
+
+#searchBox::placeholder{
+    color:#cbd5e1;
+}
+
+/* Sections */
+
+.project-section,
+.featured-project{
+
+    margin-bottom:50px;
+
+}
+
+.project-section h2,
+.featured-project h2{
+
+    margin-bottom:25px;
+
+    color:#38bdf8;
+
+}
+
+/* Cards */
+
+.project-card{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    -webkit-backdrop-filter:blur(15px);
+    backdrop-filter:blur(15px);
+    
+
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,255,255,.18);
+
+}
+
+.project-card h3{
+
+    color:#60a5fa;
+
+    margin-bottom:10px;
+
+}
+
+.project-card p{
+
+    color:#d1d5db;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+.project-card button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-weight:bold;
+
+    background:linear-gradient(90deg,#2563eb,#06b6d4);
+
+    transition:.3s;
+
+}
+
+.project-card button:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:0 0 20px rgba(6,182,212,.4);
+
+}
+
+/* Back Button */
+
+.back-btn{
+
+    text-align:center;
+
+    margin-top:50px;
+
+}
+
+.back-btn button{
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.back-btn button:hover{
+
+    background:#1d4ed8;
+
+    transform:scale(1.05);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    .header h1{
+        font-size:32px;
+    }
+
+    #searchBox{
+        width:100%;
+    }
+
+}
